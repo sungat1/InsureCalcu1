@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance Calculator Tutorial{% endblock %}
+{% block description %}Learn how to use InsureCalcu's 4 wheeler insurance calculator. Step-by-step guide to getting accurate insurance premium estimates.{% endblock %}
+{% block keywords %}insurance calculator tutorial, how to calculate insurance, insurance premium guide, auto insurance calculator help, InsureCalcu{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-body">
+        <h1 class="mb-4">How to Use Our Insurance Calculator</h1>
+        
+        <div class="alert alert-info">
+            <p class="mb-0">This tutorial will guide you through each step of using our insurance calculator to get accurate premium estimates for your vehicle.</p>
+        </div>
+
+        <section class="mb-5">
+            <h2>Step 1: Vehicle Information</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h5">Select Vehicle Type</h3>
+                    <p>Choose your vehicle type from the dropdown menu:</p>
+                    <ul>
+                        <li><strong>Sedan:</strong> Standard passenger cars</li>
+                        <li><strong>SUV:</strong> Sport Utility Vehicles</li>
+                        <li><strong>Truck:</strong> Pickup trucks and light commercial vehicles</li>
+                        <li><strong>Luxury:</strong> High-end vehicles</li>
+                    </ul>
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/vehicle-type.png') }}" alt="Vehicle Type Selection" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Step 2: Driver Information</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h5">Age Group and Driving History</h3>
+                    <p>Select your age group and driving history:</p>
+                    <ul>
+                        <li><strong>Age Groups:</strong> Different age ranges affect premium rates</li>
+                        <li><strong>Driving History:</strong> Choose between clean record, minor violations, or accidents</li>
+                    </ul>
+                    <div class="alert alert-warning">
+                        <strong>Tip:</strong> Being honest about your driving history helps get more accurate estimates.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Step 3: Vehicle Value</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h5">Enter Vehicle Value</h3>
+                    <p>Input your vehicle's current market value:</p>
+                    <ul>
+                        <li>Use Kelly Blue Book or similar services to determine value</li>
+                        <li>Enter amount in whole dollars (no cents)</li>
+                        <li>Include modifications if applicable</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Step 4: Coverage Selection</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h5">Choose Coverage Type</h3>
+                    <p>Select your desired coverage level:</p>
+                    <ul>
+                        <li><strong>Basic:</strong> Minimum required liability coverage</li>
+                        <li><strong>Collision:</strong> Adds coverage for accidents</li>
+                        <li><strong>Comprehensive:</strong> Full coverage including theft, natural disasters, etc.</li>
+                    </ul>
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> Higher coverage levels mean better protection but higher premiums.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Step 5: Understanding Results</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h5">Premium Estimates</h3>
+                    <p>After clicking "Calculate Premium," you'll see:</p>
+                    <ul>
+                        <li>Annual premium estimate</li>
+                        <li>Monthly premium breakdown</li>
+                        <li>Factors affecting your rate</li>
+                    </ul>
+                    <div class="alert alert-success">
+                        <strong>Pro Tip:</strong> Try different coverage combinations to find the best balance of protection and cost.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Additional Tips</h2>
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <li>Use accurate information for best results</li>
+                        <li>Consider multiple coverage options</li>
+                        <li>Remember these are estimates only</li>
+                        <li>Contact insurance providers for official quotes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center mt-5">
+            <p>Ready to calculate your insurance premium?</p>
+            <a href="/" class="btn btn-primary btn-lg">Try the Calculator Now</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Frequently Asked Questions{% endblock %}
+{% block description %}Find answers to common questions about using InsureCalcu's 4 wheeler insurance calculator. Learn about insurance factors, calculations, and more.{% endblock %}
+{% block keywords %}insurance calculator FAQ, common insurance questions, auto insurance help, insurance premium calculation help, InsureCalcu{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-body">
+        <h1 class="mb-4">Frequently Asked Questions</h1>
+        
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        How accurate are the insurance premium estimates?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our calculator provides estimates based on general insurance factors and market data. While we strive for accuracy, actual premiums may vary based on additional factors specific to insurance providers, your location, and other circumstances not captured in our calculator.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        What factors affect my insurance premium?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Key factors include:
+                        <ul>
+                            <li>Vehicle type and value</li>
+                            <li>Driver's age and driving history</li>
+                            <li>Coverage type selected</li>
+                            <li>Location (state-specific rates)</li>
+                            <li>Vehicle safety features</li>
+                            <li>Annual mileage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Is this an official insurance quote?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, our calculator provides estimates for informational purposes only. For an official quote, please contact insurance providers directly. Our estimates can help you understand approximate costs and compare different scenarios.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        What types of coverage are included in the calculation?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our calculator considers:
+                        <ul>
+                            <li>Basic Liability Coverage</li>
+                            <li>Collision Coverage</li>
+                            <li>Comprehensive Coverage</li>
+                            <li>Combined Coverage Options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        How often are the rates updated?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We regularly update our base rates and calculation factors to reflect current market trends and insurance industry changes. However, actual rates from insurance providers may vary and can change at any time.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        Is my information secure?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we take data security seriously. We don't store any personal information you enter into the calculator. All calculations are performed in real-time, and no data is saved. For more information, please review our <a href="/privacy-policy">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2>Still Have Questions?</h2>
+            <p>If you couldn't find the answer you were looking for, please check our <a href="/tutorial">Tutorial</a> or <a href="/contact">Contact Us</a> for additional help.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

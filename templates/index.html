@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}4 Wheeler Insurance Calculator USA{% endblock %}
+{% block description %}Welcome to InsureCalcu, your trusted source for accurate 4 wheeler insurance premium calculations. Explore our services and learn more about vehicle insurance.{% endblock %}
+{% block keywords %}car insurance calculator, 4 wheeler insurance, insurance premium estimation, auto insurance premium, USA vehicle insurance, vehicle insurance quote, 4 wheeler insurance estimate, InsureCalcu{% endblock %}
+
+{% block content %}
+<div class="hero bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to InsureCalcu</h1>
+        <p class="lead">Accurate and reliable insurance premium calculations for your vehicle.</p>
+        <a href="/tutorial" class="btn btn-light btn-lg mt-3">Learn How to Use Our Calculator</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center mb-0">4 Wheeler Insurance Calculator</h2>
+                </div>
+                <div class="card-body">
+                    <form id="insuranceForm">
+                        <div class="mb-3">
+                            <label for="vehicleType" class="form-label">Vehicle Type</label>
+                            <select class="form-select" id="vehicleType" required>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="truck">Truck</option>
+                                <option value="luxury">Luxury Vehicle</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ageGroup" class="form-label">Driver's Age Group</label>
+                            <select class="form-select" id="ageGroup" required>
+                                <option value="18-25">18-25 years</option>
+                                <option value="26-35">26-35 years</option>
+                                <option value="36-50">36-50 years</option>
+                                <option value="51-65">51-65 years</option>
+                                <option value="65+">65+ years</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="vehicleValue" class="form-label">Vehicle Value ($)</label>
+                            <input type="number" class="form-control" id="vehicleValue" required min="1000" step="1000" value="20000">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="drivingHistory" class="form-label">Driving History</label>
+                            <select class="form-select" id="drivingHistory" required>
+                                <option value="clean">Clean Record</option>
+                                <option value="violations">Minor Violations</option>
+                                <option value="accidents">Accidents</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="coverageType" class="form-label">Coverage Type</label>
+                            <select class="form-select" id="coverageType" required>
+                                <option value="basic">Basic Liability</option>
+                                <option value="collision">Collision</option>
+                                <option value="comprehensive">Comprehensive</option>
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Calculate Premium</button>
+                            <script src="{{ url_for('static', filename='script.js') }}"></script>
+                        </div>
+                    </form>
+
+                    <div id="result" class="mt-4" style="display: none;">
+                        <div class="alert alert-success">
+                            <h4 class="text-center">Estimated Insurance Premium</h4>
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <p class="mb-1">Annual Premium</p>
+                                    <h3 id="annualPremium">$0</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="mb-1">Monthly Premium</p>
+                                    <h3 id="monthlyPremium">$0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
