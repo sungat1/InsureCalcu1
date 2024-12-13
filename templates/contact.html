@@ -101,16 +101,67 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
+    // Form validation
     if (!this.checkValidity()) {
         event.stopPropagation();
         this.classList.add('was-validated');
         return;
     }
-
-    // Here you would typically send the form data to your backend
-    alert('Thank you for your message! We will get back to you soon.');
-    this.reset();
-    this.classList.remove('was-validated');
+    
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+    };
+    
+    // Disable submit button and show loading state
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+    
+    // Send the form data
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Message Sent!',
+                text: data.message,
+                confirmButtonColor: '#0d6efd'
+            });
+            
+            // Reset form
+            this.reset();
+            this.classList.remove('was-validated');
+        } else {
+            throw new Error(data.message || 'Failed to send message');
+        }
+    })
+    .catch(error => {
+        // Show error message
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: error.message || 'Something went wrong! Please try again later.',
+            confirmButtonColor: '#0d6efd'
+        });
+    })
+    .finally(() => {
+        // Restore submit button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalText;
+    });
 });
 </script>
 {% endblock %}

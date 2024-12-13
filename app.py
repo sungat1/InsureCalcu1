@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import json
 
 app = Flask(__name__)
@@ -86,5 +86,61 @@ def faq():
 def tutorial():
     return render_template('tutorial.html')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+@app.route('/blog/understanding-car-insurance-coverage-types')
+def blog_post_coverage_types():
+    return render_template('blog-post.html')
+
+@app.route('/blog/top-tips-lower-insurance-premium')
+def blog_post_lower_premium():
+    return render_template('blog-post-lower-premium.html')
+
+@app.route('/blog/liability-insurance-guide')
+def blog_post_liability():
+    return render_template('blog-post-liability.html')
+
+@app.route('/blog/comprehensive-coverage-guide')
+def blog_post_comprehensive():
+    return render_template('blog-post-comprehensive.html')
+
+@app.route('/blog/what-affects-insurance-rates')
+def blog_post_insurance_rates():
+    return render_template('blog-post-insurance-rates.html')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+
+@app.route('/api/contact', methods=['POST'])
+def submit_contact():
+    try:
+        data = request.get_json()
+        
+        # Validate required fields
+        required_fields = ['name', 'email', 'subject', 'message']
+        for field in required_fields:
+            if not data.get(field):
+                return jsonify({'success': False, 'message': f'Missing required field: {field}'}), 400
+        
+        # Here you would typically:
+        # 1. Send an email
+        # 2. Store in database
+        # 3. Forward to a CRM system
+        # For now, we'll just return success
+        
+        return jsonify({
+            'success': True,
+            'message': 'Thank you for your message! We will get back to you soon.'
+        })
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': 'An error occurred while processing your request.'
+        }), 500
+
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

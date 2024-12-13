@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<!-- Additional SEO Meta Tags -->
+<meta name="author" content="InsureCalcu">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days">
+
+<!-- Social Media Meta Tags -->
+<meta property="article:published_time" content="2024-12-12T08:15:05-05:00">
+<meta property="article:author" content="InsureCalcu">
+<meta property="article:section" content="Insurance Guides">
+<meta property="article:tag" content="car insurance, auto insurance, insurance coverage, liability insurance, comprehensive coverage, collision coverage">
+<meta property="og:image" content="{{ url_for('static', filename='images/car-insurance-guide.webp') }}">
+<meta name="twitter:image" content="{{ url_for('static', filename='images/car-insurance-guide.webp') }}">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Car Insurance Coverage Types: A Comprehensive Guide 2024",
+  "image": "{{ url_for('static', filename='images/car-insurance-guide.webp') }}",
+  "author": {
+    "@type": "Organization",
+    "name": "InsureCalcu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InsureCalcu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ url_for('static', filename='logo.png') }}"
+    }
+  },
+  "datePublished": "2024-12-12T08:15:05-05:00",
+  "dateModified": "2024-12-12T08:15:05-05:00",
+  "description": "Learn about different types of car insurance coverage, from liability to comprehensive. Discover what each type covers and how to choose the right insurance for your needs.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.url }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block title %}Understanding Car Insurance Coverage Types: A Comprehensive Guide 2024{% endblock %}
+{% block description %}Learn about different types of car insurance coverage, from liability to comprehensive. Discover what each type covers and how to choose the right insurance for your needs in 2024.{% endblock %}
+{% block keywords %}car insurance types, auto insurance coverage, liability insurance, comprehensive coverage, collision coverage, car insurance guide, types of auto insurance, vehicle insurance options, insurance policy types{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <article class="blog-post">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                <li class="breadcrumb-item"><a href="/blog?category=guides">Insurance Guides</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Understanding Car Insurance Coverage Types</li>
+            </ol>
+        </nav>
+
+        <header class="mb-5">
+            <span class="badge bg-primary mb-2">Insurance Guides</span>
+            <h1 class="display-4 mb-3">Understanding Car Insurance Coverage Types: A Comprehensive Guide</h1>
+            <div class="text-muted mb-4">
+                <span><i class="bi bi-calendar3"></i> December 12, 2024</span>
+                <span class="mx-2">|</span>
+                <span><i class="bi bi-clock"></i> 12 min read</span>
+                <span class="mx-2">|</span>
+                <span><i class="bi bi-person"></i> By Insurance Expert</span>
+            </div>
+            <img src="{{ url_for('static', filename='images/car-insurance-guide.webp') }}" alt="Different types of car insurance coverage illustrated" class="img-fluid rounded mb-4 feature-image">
+        </header>
+
+        <div class="blog-content">
+            <div class="table-of-contents mb-5 p-4 bg-light rounded">
+                <h2 class="h5 mb-3">Table of Contents</h2>
+                <ol class="list-unstyled">
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#liability">2. Liability Insurance Coverage</a></li>
+                    <li><a href="#collision">3. Collision Coverage</a></li>
+                    <li><a href="#comprehensive">4. Comprehensive Coverage</a></li>
+                    <li><a href="#personal-injury">5. Personal Injury Protection (PIP)</a></li>
+                    <li><a href="#uninsured">6. Uninsured/Underinsured Motorist Coverage</a></li>
+                    <li><a href="#additional">7. Additional Coverage Options</a></li>
+                    <li><a href="#choosing">8. How to Choose the Right Coverage</a></li>
+                    <li><a href="#conclusion">9. Conclusion</a></li>
+                </ol>
+            </div>
+
+            <section id="introduction">
+                <h2>Introduction to Car Insurance Coverage Types</h2>
+                <p>Navigating the world of car insurance can be overwhelming, especially with the various coverage types available. This comprehensive guide breaks down each type of car insurance coverage, helping you make informed decisions about protecting your vehicle and financial well-being. Understanding these coverage types is crucial for ensuring you have the right protection at the right price.</p>
+                <img src="{{ url_for('static', filename='images/car-insurance-intro.webp') }}" alt="Car insurance concept illustration" class="img-fluid rounded my-4">
+            </section>
+
+            <section id="liability">
+                <h2>Liability Insurance Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <p>Liability insurance is a fundamental type of coverage that helps protect you financially if you're responsible for an accident that causes injury or property damage to others.</p>
+                        <ul>
+                            <li>Bodily injury liability coverage</li>
+                            <li>Property damage liability coverage</li>
+                            <li>Legal defense costs</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/liability-coverage.webp') }}" alt="Liability insurance coverage explained" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <section id="collision">
+                <h2>Collision Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/collision-coverage.webp') }}" alt="Collision coverage protection" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Collision coverage helps pay for damage to your vehicle when you collide with another vehicle or object, regardless of who is at fault.</p>
+                        <ul>
+                            <li>Repairs after accidents</li>
+                            <li>Vehicle replacement costs</li>
+                            <li>Protection regardless of fault</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comprehensive">
+                <h2>Comprehensive Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <p>Comprehensive coverage protects your vehicle from non-collision related damage, including natural disasters, theft, and vandalism.</p>
+                        <ul>
+                            <li>Natural disasters protection</li>
+                            <li>Theft coverage</li>
+                            <li>Vandalism protection</li>
+                            <li>Animal collision coverage</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/comprehensive-coverage.webp') }}" alt="Comprehensive coverage protection" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <section id="personal-injury">
+                <h2>Personal Injury Protection (PIP)</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/pip-coverage.webp') }}" alt="Personal injury protection coverage" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Personal Injury Protection (PIP) covers medical expenses for you and your passengers, regardless of who caused the accident.</p>
+                        <ul>
+                            <li>Medical expenses coverage</li>
+                            <li>Lost wages compensation</li>
+                            <li>Rehabilitation costs</li>
+                            <li>Essential services coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="uninsured">
+                <h2>Uninsured/Underinsured Motorist Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <p>This coverage protects you when you're in an accident with a driver who either has no insurance or insufficient coverage to pay for your damages.</p>
+                        <ul>
+                            <li>Protection from uninsured drivers</li>
+                            <li>Coverage for hit-and-run accidents</li>
+                            <li>Underinsured driver protection</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/uninsured-coverage.webp') }}" alt="Uninsured motorist coverage" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <section id="choosing">
+                <h2>How to Choose the Right Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/vehicle-choice.webp') }}" alt="Choosing the right insurance coverage" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Selecting the right coverage depends on various factors including your vehicle's value, your budget, and your risk tolerance.</p>
+                        <ul>
+                            <li>Consider your vehicle's value</li>
+                            <li>Evaluate your risk tolerance</li>
+                            <li>Review state requirements</li>
+                            <li>Calculate potential costs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p>Understanding car insurance coverage types is essential for making informed decisions about your auto insurance. While basic liability coverage is mandatory, additional coverage types provide crucial protection for various situations. Consider your specific needs, budget, and risk factors when selecting coverage, and regularly review your policy to ensure it continues to meet your needs.</p>
+                
+                <div class="call-to-action mt-5 p-4 bg-light rounded">
+                    <h3 class="h4">Calculate Your Premium</h3>
+                    <p>Use our insurance calculator to estimate your premium based on your coverage selections and vehicle details.</p>
+                    <a href="/" class="btn btn-primary">Try Our Insurance Calculator</a>
+                </div>
+            </section>
+
+          <!-- Author Bio -->
+          <div class="author-bio card mt-5">
+              <div class="card-body">
+                  <div class="d-flex align-items-center">
+                      <img src="{{ url_for('static', filename='images/author-avatar.webp') }}" 
+                           class="rounded-circle me-3" 
+                           alt="Author avatar" 
+                           style="width: 60px; height: 60px; object-fit: cover;">
+                      <div>
+                          <h5 class="mb-1">Written by InsureCalcu Team</h5>
+                          <p class="text-muted mb-0">Insurance experts dedicated to helping you make informed decisions about your vehicle insurance needs.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <!-- Social Share -->
+            <div class="share-buttons mt-5">
+                <h3 class="h5 mb-3">Share this article</h3>
+                <a href="#" class="btn btn-outline-primary me-2">
+                    <i class="bi bi-facebook"></i> Share
+                </a>
+                <a href="#" class="btn btn-outline-info me-2">
+                    <i class="bi bi-twitter"></i> Tweet
+                </a>
+                <a href="#" class="btn btn-outline-secondary">
+                    <i class="bi bi-linkedin"></i> Share
+                </a>
+            </div>
+        </div>
+    </article>
+</div>
+
+<style>
+.feature-image {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.table-of-contents {
+    border-left: 4px solid #0d6efd;
+}
+
+.table-of-contents a {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.table-of-contents a:hover {
+    color: #0d6efd;
+    padding-left: 5px;
+}
+
+.blog-content h2 {
+    color: #2c3e50;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+    color: #34495e;
+    margin-top: 2rem;
+}
+
+.blog-content p, .blog-content ul, .blog-content ol {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.blog-content img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.info-box {
+    border-left: 4px solid #0d6efd;
+}
+
+.coverage-grid {
+    margin: 2rem 0;
+}
+
+.author-bio img {
+    max-width: 120px;
+}
+
+.share-buttons .btn {
+    padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .feature-image {
+        max-height: 300px;
+    }
+    
+    .blog-content img {
+        max-height: 300px;
+    }
+}
+</style>
+{% endblock %}

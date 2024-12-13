@@ -1,0 +1,577 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<!-- SEO Meta Tags -->
+<meta name="description" content="Comprehensive guide to understanding different types of car insurance coverage. Learn about liability, collision, comprehensive coverage, and more to make informed decisions about your auto insurance.">
+<meta name="keywords" content="car insurance types, auto insurance coverage, liability insurance, comprehensive coverage, collision coverage, PIP insurance, uninsured motorist coverage">
+<meta name="author" content="InsureCalcu">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Understanding Car Insurance Coverage Types - Complete Guide 2024">
+<meta property="og:description" content="Learn everything about car insurance coverage types from liability to comprehensive. Make informed decisions about your auto insurance coverage.">
+<meta property="og:image" content="{{ url_for('static', filename='images/car-insurance-guide.webp') }}">
+<meta property="og:url" content="{{ request.url }}">
+<meta property="og:type" content="article">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Understanding Car Insurance Coverage Types - Complete Guide 2024">
+<meta name="twitter:description" content="Learn everything about car insurance coverage types from liability to comprehensive. Make informed decisions about your auto insurance coverage.">
+<meta name="twitter:image" content="{{ url_for('static', filename='images/car-insurance-guide.webp') }}">
+
+<!-- Article Specific Meta Tags -->
+<meta property="article:published_time" content="2024-12-12T08:21:36-05:00">
+<meta property="article:modified_time" content="2024-12-12T08:21:36-05:00">
+<meta property="article:section" content="Insurance Education">
+<meta property="article:tag" content="Car Insurance">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.url }}"
+  },
+  "headline": "Understanding Car Insurance Coverage Types: A Comprehensive Guide 2024",
+  "description": "Learn everything about car insurance coverage types from liability to comprehensive. Make informed decisions about your auto insurance coverage.",
+  "image": "{{ url_for('static', filename='images/car-insurance-guide.webp') }}",
+  "author": {
+    "@type": "Organization",
+    "name": "InsureCalcu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InsureCalcu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ url_for('static', filename='images/logo.png') }}"
+    }
+  },
+  "datePublished": "2024-12-12T08:21:36-05:00",
+  "dateModified": "2024-12-12T08:21:36-05:00"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <article class="blog-post">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                <li class="breadcrumb-item active">Understanding Car Insurance Coverage Types</li>
+            </ol>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="mb-5">
+            <div class="meta-info mb-3">
+                <span class="badge bg-primary">Insurance Guide</span>
+                <span class="text-muted ms-3">
+                    <i class="bi bi-clock"></i> 12 min read
+                </span>
+                <span class="text-muted ms-3">
+                    <i class="bi bi-calendar"></i> December 12, 2024
+                </span>
+            </div>
+            <h1 class="display-4 mb-4">Understanding Car Insurance Coverage Types: A Comprehensive Guide</h1>
+            <p class="lead">Navigate the complex world of auto insurance with our detailed breakdown of coverage types, helping you make informed decisions about protecting your vehicle and financial well-being.</p>
+            <img src="{{ url_for('static', filename='images/car-insurance-guide.webp') }}" alt="Various types of car insurance coverage illustrated" class="img-fluid rounded shadow-sm mb-4">
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc-container bg-light p-4 rounded mb-5">
+            <h2 class="h4 mb-3">Quick Navigation</h2>
+            <div class="toc-wrapper">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="toc-section mb-3">
+                            <h3 class="h6 text-primary">Essential Coverage</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#liability" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Liability Coverage
+                                        <ul class="list-unstyled ms-4 mt-1">
+                                            <li class="mb-1">
+                                                <a href="#bodily-injury" class="text-decoration-none">
+                                                    <i class="bi bi-dot me-1"></i>Bodily Injury
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#property-damage" class="text-decoration-none">
+                                                    <i class="bi bi-dot me-1"></i>Property Damage
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#collision" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Collision Coverage
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="toc-section">
+                            <h3 class="h6 text-primary">Additional Protection</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#comprehensive" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Comprehensive Coverage
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#personal-injury" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Personal Injury Protection
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="toc-section mb-3">
+                            <h3 class="h6 text-primary">Specialized Coverage</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#uninsured" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Uninsured Motorist
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#additional" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Additional Options
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="toc-section">
+                            <h3 class="h6 text-primary">Resources</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#choosing" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Choosing Coverage
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#conclusion" class="text-decoration-none">
+                                        <i class="bi bi-arrow-right-circle me-2"></i>Conclusion & Calculator
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="reading-time text-muted mt-3 pt-3 border-top">
+                    <i class="bi bi-clock me-2"></i>Calculating reading time...
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .toc-container {
+                border-left: 4px solid #0d6efd;
+            }
+            .toc-wrapper a {
+                color: #495057;
+                transition: all 0.2s ease;
+            }
+            .toc-wrapper a:hover {
+                color: #0d6efd;
+                transform: translateX(5px);
+            }
+            .toc-section h3 {
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+            .toc-wrapper ul li {
+                transition: transform 0.2s ease;
+            }
+            .toc-wrapper ul li:hover {
+                transform: translateX(5px);
+            }
+            .reading-time {
+                font-size: 0.9rem;
+            }
+        </style>
+
+        <!-- Main Content -->
+        <div class="article-content">
+            <section id="introduction" class="mb-5">
+                <h2>Introduction</h2>
+                <p>Car insurance is more than just a legal requirement—it's a crucial financial safety net that protects you, your vehicle, and others on the road. Understanding the different types of car insurance coverage is essential for making informed decisions about your auto insurance policy. In this comprehensive guide, we'll break down each type of coverage, explaining what it protects, why you might need it, and how to determine the right amount of coverage for your situation.</p>
+            </section>
+
+            <section id="liability" class="mb-5">
+                <h2>Liability Coverage</h2>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/liability-coverage.webp') }}" alt="Liability insurance coverage explanation" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Bodily Injury Liability</h3>
+                        <p>This fundamental coverage pays for injuries to others when you're at fault in an accident. It covers:</p>
+                        <ul>
+                            <li>Medical expenses</li>
+                            <li>Lost wages</li>
+                            <li>Legal defense costs</li>
+                            <li>Pain and suffering damages</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-box bg-light p-4 rounded">
+                    <h3>Property Damage Liability</h3>
+                    <p>This coverage handles damage you cause to others' property, including:</p>
+                    <ul>
+                        <li>Damage to other vehicles</li>
+                        <li>Damage to buildings or structures</li>
+                        <li>Damage to fences, lamp posts, and other property</li>
+                    </ul>
+                    <div class="alert alert-info">
+                        <strong>Pro Tip:</strong> Most states require minimum liability coverage, but these minimums may not provide adequate protection. Consider higher limits for better financial security.
+                    </div>
+                </div>
+            </section>
+
+            <section id="collision" class="mb-5">
+                <h2>Collision Coverage</h2>
+                <p>Collision coverage protects your vehicle when it's damaged in an accident with another vehicle or object, regardless of who's at fault. This coverage is particularly important for newer vehicles or those with significant value.</p>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>What Collision Coverage Includes:</h4>
+                                <ul>
+                                    <li>Damage from accidents with other vehicles</li>
+                                    <li>Damage from hitting objects (trees, poles, etc.)</li>
+                                    <li>Single-car accidents (rollovers)</li>
+                                    <li>Damage from potholes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/collision-coverage.webp') }}" alt="Car collision coverage illustration" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <section id="comprehensive" class="mb-5">
+                <h2>Comprehensive Coverage</h2>
+                <p>Comprehensive coverage protects against non-collision related damage to your vehicle. This "other than collision" coverage is essential for protecting against a wide range of potential hazards.</p>
+                
+                <div class="coverage-grid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4>Natural Disasters</h4>
+                                    <ul>
+                                        <li>Floods</li>
+                                        <li>Hail damage</li>
+                                        <li>Fallen trees</li>
+                                        <li>Wind damage</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4>Criminal Acts</h4>
+                                    <ul>
+                                        <li>Theft</li>
+                                        <li>Vandalism</li>
+                                        <li>Break-ins</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4>Other Incidents</h4>
+                                    <ul>
+                                        <li>Fire damage</li>
+                                        <li>Animal collisions</li>
+                                        <li>Falling objects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="personal-injury" class="mb-5">
+                <h2>Personal Injury Protection (PIP)</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Personal Injury Protection, or PIP coverage, helps pay for medical expenses and related costs for you and your passengers, regardless of who caused the accident. This coverage is particularly valuable in no-fault states.</p>
+                        <div class="coverage-details">
+                            <h4>PIP Coverage Includes:</h4>
+                            <ul>
+                                <li>Medical expenses</li>
+                                <li>Lost wages</li>
+                                <li>Rehabilitation costs</li>
+                                <li>Essential services (childcare, housekeeping)</li>
+                                <li>Funeral expenses</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='images/pip-coverage.webp') }}" alt="Personal Injury Protection coverage explanation" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <section id="uninsured" class="mb-5">
+                <h2>Uninsured/Underinsured Motorist Coverage</h2>
+                <p>This crucial coverage protects you when you're involved in an accident with a driver who either has no insurance or insufficient coverage to pay for your damages.</p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h4>Uninsured Motorist Coverage</h4>
+                                <p>Protects you when the at-fault driver has no insurance coverage.</p>
+                                <ul>
+                                    <li>Medical expenses</li>
+                                    <li>Lost wages</li>
+                                    <li>Pain and suffering</li>
+                                    <li>Vehicle damage (in some states)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h4>Underinsured Motorist Coverage</h4>
+                                <p>Provides additional protection when the at-fault driver's insurance is insufficient.</p>
+                                <ul>
+                                    <li>Covers the gap in coverage</li>
+                                    <li>Protects against high medical costs</li>
+                                    <li>Ensures adequate compensation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="additional" class="mb-5">
+                <h2>Additional Coverage Options</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>Gap Insurance</h4>
+                                <p>Covers the difference between your car's actual cash value and what you owe on your loan if your car is totaled.</p>
+                                <ul>
+                                    <li>Essential for new cars</li>
+                                    <li>Protects your loan balance</li>
+                                    <li>Often required by lenders</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>Rental Car Coverage</h4>
+                                <p>Helps pay for a rental car while your vehicle is being repaired after a covered accident.</p>
+                                <ul>
+                                    <li>Daily rental allowance</li>
+                                    <li>Flexible duration options</li>
+                                    <li>Convenience during repairs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>Roadside Assistance</h4>
+                                <p>Provides emergency services when your vehicle breaks down.</p>
+                                <ul>
+                                    <li>Towing services</li>
+                                    <li>Jump-starts</li>
+                                    <li>Tire changes</li>
+                                    <li>Fuel delivery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="factors" class="mb-5">
+                <h2>Factors to Consider When Choosing Coverage</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h4>Vehicle Factors</h4>
+                                <ul>
+                                    <li>Age of vehicle</li>
+                                    <li>Value of vehicle</li>
+                                    <li>Lease or loan requirements</li>
+                                    <li>Usage patterns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h4>Personal Factors</h4>
+                                <ul>
+                                    <li>Budget constraints</li>
+                                    <li>Risk tolerance</li>
+                                    <li>Assets to protect</li>
+                                    <li>State requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion" class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Choosing the right car insurance coverage is a crucial decision that requires careful consideration of your specific needs, circumstances, and risk tolerance. While basic liability coverage is mandatory in most states, additional coverage types provide important protection against various risks and potential financial hardships.</p>
+                
+                <div class="cta-box bg-light p-4 rounded mt-4">
+                    <h4>Ready to Calculate Your Premium?</h4>
+                    <p>Use our insurance calculator to estimate your premium based on your selected coverage types and personal factors.</p>
+                    <a href="/" class="btn btn-primary">Try Our Insurance Calculator</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio card mt-5">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='images/author-avatar.webp') }}" 
+                         class="rounded-circle me-3" 
+                         alt="Author avatar" 
+                         style="width: 60px; height: 60px; object-fit: cover;">
+                    <div>
+                        <h5 class="mb-1">Written by InsureCalcu Team</h5>
+                        <p class="text-muted mb-0">Insurance experts dedicated to helping you make informed decisions about your vehicle insurance needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Guide Section -->
+        <div class="share-guide">
+            <h3 class="h5 mb-3">Share this Guide</h3>
+            <p class="text-muted mb-3">Found this guide helpful? Share it with others who might benefit!</p>
+            <div class="share-buttons">
+                <button onclick="shareOnSocial('twitter')" class="share-btn twitter">
+                    <i class="fab fa-twitter"></i>Tweet
+                </button>
+                <button onclick="shareOnSocial('facebook')" class="share-btn facebook">
+                    <i class="fab fa-facebook-f"></i>Share
+                </button>
+                <button onclick="shareOnSocial('linkedin')" class="share-btn linkedin">
+                    <i class="fab fa-linkedin-in"></i>Post
+                </button>
+                <button onclick="copyPageUrl()" class="share-btn copy-link">
+                    <i class="fas fa-link"></i>Copy Link
+                </button>
+            </div>
+            <div id="copySuccess">
+                <i class="fas fa-check-circle"></i> Link copied to clipboard!
+            </div>
+        </div>
+        </div>
+    </article>
+</div>
+
+<!-- Custom Styles -->
+<style>
+.blog-post {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc ul li {
+    margin-bottom: 0.5rem;
+}
+
+.toc a {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.toc a:hover {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.article-content h2 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.info-box {
+    border-left: 4px solid #0d6efd;
+}
+
+.coverage-grid .card {
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.coverage-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+.author-bio img {
+    max-width: 120px;
+}
+
+.social-share {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+}
+
+@media (max-width: 768px) {
+    .blog-post h1 {
+        font-size: 2rem;
+    }
+    
+    .article-content p {
+        font-size: 1rem;
+    }
+}
+</style>
+{% endblock %}

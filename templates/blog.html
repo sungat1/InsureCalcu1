@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance Blog{% endblock %}
+{% block description %}Read the latest articles about car insurance, tips, and industry insights to help you make informed decisions about your vehicle insurance.{% endblock %}
+{% block keywords %}insurance blog, car insurance tips, vehicle insurance guides, auto insurance advice, insurance industry news{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <header class="mb-5">
+        <h1 class="mb-4">Insurance Blog</h1>
+        <nav aria-label="Blog Categories" class="mb-4">
+            <ul class="nav nav-pills" id="blogCategories">
+                <li class="nav-item">
+                    <button class="nav-link active" data-category="all">All Posts</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="guides">Guides</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="tips">Tips & Advice</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="news">Industry News</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="row g-4" id="blogPosts">
+        <!-- Featured Post -->
+        <div class="col-12 mb-4" data-category="guides">
+            <div class="card featured-post">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/car-insurance-guide.webp') }}" 
+                             class="img-fluid rounded-start h-100 object-fit-cover" 
+                             alt="Understanding Car Insurance Coverage Types">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">Featured</span>
+                            <h2 class="card-title h3">Understanding Car Insurance Coverage Types</h2>
+                            <p class="card-text text-muted">December 12, 2024 • 8 min read • Guides</p>
+                            <p class="card-text">A comprehensive guide to different types of car insurance coverage and what they mean for you.</p>
+                            <div class="mt-3">
+                                <a href="/blog/understanding-car-insurance-coverage-types" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Posts -->
+        <div class="col-md-6 col-lg-4" data-category="tips">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/lower-premium-tips.webp') }}" 
+                     class="card-img-top" 
+                     alt="Lower Your Insurance Premium">
+                <div class="card-body">
+                    <span class="badge bg-info mb-2">Tips & Advice</span>
+                    <h3 class="card-title h5">Top Tips to Lower Your Insurance Premium</h3>
+                    <p class="card-text text-muted">December 10, 2024 • 5 min read</p>
+                    <p class="card-text">Discover practical ways to reduce your car insurance costs without compromising coverage.</p>
+                    <a href="/blog/top-tips-lower-insurance-premium" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-category="guides">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/liability-coverage.webp') }}" 
+                     class="card-img-top" 
+                     alt="Understanding Liability Insurance">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Essential Guide</span>
+                    <h3 class="card-title h5">Understanding Liability Insurance</h3>
+                    <p class="card-text text-muted">December 12, 2024 • 12 min read</p>
+                    <p class="card-text">Learn everything about liability insurance, from coverage types to limits. Make informed decisions about your financial protection.</p>
+                    <a href="/blog/liability-insurance-guide" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-category="guides">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/blog/insurance-rates/insurance-rates-hero.webp') }}" 
+                     class="card-img-top" 
+                     alt="Factors affecting insurance rates"
+                     onerror="this.src='{{ url_for('static', filename='images/placeholder.jpg') }}'">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Essential Guide</span>
+                    <h3 class="card-title h5">What Affects Car Insurance Rates?</h3>
+                    <p class="card-text text-muted">December 13, 2024 • 12 min read</p>
+                    <p class="card-text">Discover the key factors that influence your car insurance premiums and learn how to potentially lower your rates.</p>
+                    <a href="{{ url_for('blog_post_insurance_rates') }}" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="text-center py-5 d-none">
+        <h3>No posts found in this category</h3>
+        <p class="text-muted">Try selecting a different category or check back later for new content.</p>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="mt-5" aria-label="Blog navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<style>
+.featured-post {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+}
+
+.card {
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.badge {
+    font-weight: 500;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.nav-pills .nav-link {
+    color: #6c757d;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Animation for cards */
+.blog-post-animate {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .nav-pills .nav-item {
+        flex: 0 0 auto;
+    }
+    
+    .nav-pills .nav-link {
+        white-space: nowrap;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('#blogCategories .nav-link');
+    const blogPosts = document.querySelectorAll('#blogPosts > div');
+    const noResults = document.getElementById('noResults');
+    
+    // Function to filter posts
+    function filterPosts(category) {
+        let visiblePosts = 0;
+        
+        blogPosts.forEach(post => {
+            const postCategory = post.dataset.category;
+            if (category === 'all' || postCategory === category) {
+                post.style.display = '';
+                post.classList.add('blog-post-animate');
+                visiblePosts++;
+            } else {
+                post.style.display = 'none';
+                post.classList.remove('blog-post-animate');
+            }
+        });
+        
+        // Show/hide no results message
+        noResults.classList.toggle('d-none', visiblePosts > 0);
+        
+        // Update URL without page reload
+        const url = new URL(window.location);
+        if (category !== 'all') {
+            url.searchParams.set('category', category);
+        } else {
+            url.searchParams.delete('category');
+        }
+        window.history.pushState({}, '', url);
+    }
+    
+    // Add click event listeners to category buttons
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            // Filter posts
+            filterPosts(this.dataset.category);
+        });
+    });
+    
+    // Check URL parameters on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+        const categoryButton = document.querySelector(`[data-category="${categoryParam}"]`);
+        if (categoryButton) {
+            categoryButton.click();
+        }
+    }
+});
+</script>
+{% endblock %}

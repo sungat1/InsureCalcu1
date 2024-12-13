@@ -1,0 +1,514 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<!-- SEO Meta Tags -->
+<meta name="description" content="Comprehensive guide to liability insurance: Learn about coverage types, limits, state requirements, and how to choose the right protection for your needs. Updated for 2024.">
+<meta name="keywords" content="liability insurance, bodily injury liability, property damage liability, coverage limits, state requirements, insurance premiums, 2024 insurance guide">
+<meta name="author" content="InsureCalcu">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Complete Liability Insurance Guide 2024: Expert Tips & Coverage Details">
+<meta property="og:description" content="Your comprehensive guide to understanding liability insurance. Learn about coverage types, limits, and how to get the best protection for your needs.">
+<meta property="og:image" content="{{ url_for('static', filename='images/blog/liability/liability-hero-shield.webp') }}">
+<meta property="og:url" content="{{ url_for('blog_post_liability', _external=True) }}">
+<meta property="og:type" content="article">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Complete Liability Insurance Guide 2024">
+<meta name="twitter:description" content="Expert guide to liability insurance coverage, requirements, and savings tips.">
+<meta name="twitter:image" content="{{ url_for('static', filename='images/blog/liability/liability-hero-shield.webp') }}">
+
+<!-- Article Specific Meta Tags -->
+<meta property="article:published_time" content="2024-12-13T04:18:24-05:00">
+<meta property="article:modified_time" content="2024-12-13T04:18:24-05:00">
+<meta property="article:section" content="Insurance Education">
+<meta property="article:tag" content="Liability Insurance, Insurance Guide, Coverage Types, Insurance Requirements">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url_for('blog_post_liability', _external=True) }}"
+  },
+  "headline": "Complete Liability Insurance Guide 2024: Expert Tips & Coverage Details",
+  "description": "Comprehensive guide to liability insurance: Learn about coverage types, limits, state requirements, and how to choose the right protection for your needs. Updated for 2024.",
+  "image": "{{ url_for('static', filename='images/blog/liability/liability-hero-shield.webp') }}",
+  "author": {
+    "@type": "Organization",
+    "name": "InsureCalcu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InsureCalcu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ url_for('static', filename='images/logo.png') }}"
+    }
+  },
+  "datePublished": "2024-12-13T04:18:24-05:00",
+  "dateModified": "2024-12-13T04:18:24-05:00",
+  "keywords": "liability insurance, bodily injury liability, property damage liability, coverage limits, state requirements, insurance premiums",
+  "articleSection": "Insurance Education",
+  "articleBody": "Learn everything about liability insurance, from coverage types to limits. Understand how liability insurance protects you financially and what factors affect your premiums."
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="liability-guide">
+    <!-- Hero Section -->
+    <header class="hero-section text-white position-relative mb-5">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative py-5">
+            <div class="row align-items-center min-vh-50">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">Understanding Liability Insurance</h1>
+                    <p class="lead mb-4">Your Complete Guide to Protection and Peace of Mind in 2024</p>
+                    <div class="meta-info d-flex justify-content-center gap-4 text-white-50">
+                        <span><i class="bi bi-calendar3"></i> Updated: December 13, 2024</span>
+                        <span><i class="bi bi-clock"></i> 12 min read</span>
+                        <span><i class="bi bi-person"></i> By InsureCalcu Team</span>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#quick-nav" class="btn btn-outline-light btn-lg">Start Reading <i class="bi bi-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/blog/liability/liability-hero-shield.webp') }}"
+             alt="Protective shield covering car and home, representing liability insurance"
+             class="hero-image"
+             width="1200" height="800"
+             loading="lazy">
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Quick Navigation -->
+        <div id="quick-nav" class="quick-nav-section mb-5">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <nav class="nav-container bg-light p-4 rounded-lg shadow-sm">
+                        <h2 class="h4 mb-4">Quick Navigation</h2>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="nav-group">
+                                    <h3 class="h6 text-primary">Essentials</h3>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#introduction" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Introduction</a></li>
+                                        <li><a href="#key-benefits" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Key Benefits</a></li>
+                                        <li><a href="#types" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Coverage Types</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="nav-group">
+                                    <h3 class="h6 text-primary">Coverage Details</h3>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#coverage-limits" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Coverage Limits</a></li>
+                                        <li><a href="#state-requirements" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>State Requirements</a></li>
+                                        <li><a href="#claims" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Claims Process</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="nav-group">
+                                    <h3 class="h6 text-primary">Additional Resources</h3>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#calculator" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Premium Calculator</a></li>
+                                        <li><a href="#tips" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>Money-Saving Tips</a></li>
+                                        <li><a href="#faq" class="nav-link"><i class="bi bi-arrow-right-circle me-2"></i>FAQs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Introduction Section -->
+                <section id="introduction" class="content-section mb-5">
+                    <h2 class="section-title">Introduction to Liability Insurance</h2>
+                    <div class="content-card bg-light p-4 rounded-lg shadow-sm">
+                        <img src="{{ url_for('static', filename='images/blog/liability/liability-basics.webp') }}"
+                             alt="Basic concepts of liability insurance illustrated with protective shield and key components"
+                             class="img-fluid rounded-lg mb-4"
+                             width="800" height="600"
+                             loading="lazy">
+                        <div class="content-text">
+                            <p class="lead">Liability insurance is your financial shield against the unexpected, providing essential protection when you're legally responsible for causing harm to others or their property.</p>
+                            <div class="key-points mt-4">
+                                <h3 class="h5 mb-3">What You'll Learn</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Different types of liability coverage</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>How to choose appropriate coverage limits</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>State-specific requirements</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tips for reducing your premiums</li>
+                                </ul>
+                            </div>
+                            <div class="alert alert-info mt-4">
+                                <strong>Key Point:</strong> Liability insurance is mandatory in most states and serves as your primary financial protection against claims and lawsuits.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Benefits Section -->
+                <section id="key-benefits" class="content-section mb-5">
+                    <h2 class="section-title">Key Benefits of Liability Insurance</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="benefit-card h-100 bg-light p-4 rounded-lg shadow-sm">
+                                <div class="benefit-icon mb-3">
+                                    <i class="bi bi-shield-check text-primary h1"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Financial Protection</h3>
+                                <p>Covers legal expenses, medical bills, and property damage costs if you're found at fault in an accident.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="benefit-card h-100 bg-light p-4 rounded-lg shadow-sm">
+                                <div class="benefit-icon mb-3">
+                                    <i class="bi bi-building-check text-primary h1"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Legal Compliance</h3>
+                                <p>Meets state requirements and ensures you're legally allowed to drive or operate your business.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Coverage Types Section -->
+                <section id="types" class="content-section mb-5">
+                    <h2 class="section-title">Types of Liability Coverage</h2>
+                    <div class="coverage-types">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="coverage-card h-100 bg-light p-4 rounded-lg shadow-sm">
+                                    <h3 class="h5 mb-3">Bodily Injury Liability</h3>
+                                    <img src="{{ url_for('static', filename='images/blog/liability/bodily-injury.webp') }}"
+                                         alt="Medical and emergency services covered by bodily injury liability"
+                                         class="img-fluid rounded-lg mb-3"
+                                         width="800" height="600"
+                                         loading="lazy">
+                                    <div class="coverage-content">
+                                        <p>Covers medical expenses, lost wages, and legal fees if you're responsible for injuring someone in an accident.</p>
+                                        <ul class="list-unstyled mt-3">
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medical expenses</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lost wages</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Legal defense costs</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pain and suffering damages</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="coverage-card h-100 bg-light p-4 rounded-lg shadow-sm">
+                                    <h3 class="h5 mb-3">Property Damage Liability</h3>
+                                    <img src="{{ url_for('static', filename='images/blog/liability/property-damage.webp') }}"
+                                         alt="Property damage coverage and repair process visualization"
+                                         class="img-fluid rounded-lg mb-3"
+                                         width="800" height="600"
+                                         loading="lazy">
+                                    <div class="coverage-content">
+                                        <p>Covers repair or replacement costs for other people's property that you damage in an accident.</p>
+                                        <ul class="list-unstyled mt-3">
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Vehicle repair costs</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Building damage</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Personal property</li>
+                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Public infrastructure</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Coverage Limits Section -->
+                <section id="coverage-limits" class="content-section mb-5">
+                    <h2 class="section-title">Understanding Coverage Limits</h2>
+                    <div class="content-card bg-light p-4 rounded-lg shadow-sm">
+                        <img src="{{ url_for('static', filename='images/blog/liability/coverage-limits.webp') }}"
+                             alt="Chart showing different tiers of liability insurance coverage limits"
+                             class="img-fluid rounded-lg mb-4"
+                             width="800" height="600"
+                             loading="lazy">
+                        <div class="limits-table mt-4">
+                            <h3 class="h5 mb-3">Coverage Limit Examples</h3>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Coverage Type</th>
+                                            <th>Example Limit</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Per Person</td>
+                                            <td>$50,000</td>
+                                            <td>Maximum for each injured person</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Per Accident</td>
+                                            <td>$100,000</td>
+                                            <td>Maximum for all injuries in one accident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Property Damage</td>
+                                            <td>$50,000</td>
+                                            <td>Maximum for property damage</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- State Requirements Section -->
+                <section id="state-requirements" class="content-section mb-5">
+                    <h2 class="section-title">State Requirements</h2>
+                    <div class="content-card bg-light p-4 rounded-lg shadow-sm">
+                        <img src="{{ url_for('static', filename='images/blog/liability/state-requirements.webp') }}"
+                             alt="US map showing state-by-state liability insurance requirements"
+                             class="img-fluid rounded-lg mb-4"
+                             width="800" height="600"
+                             loading="lazy">
+                        <div class="alert alert-warning mt-3">
+                            <strong>Important:</strong> Consider purchasing higher limits than your state's minimum requirements to better protect your assets.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Claims Process Section -->
+                <section id="claims" class="content-section mb-5">
+                    <h2 class="section-title">Filing a Liability Claim</h2>
+                    <div class="content-card bg-light p-4 rounded-lg shadow-sm">
+                        <img src="{{ url_for('static', filename='images/blog/liability/claims-process.webp') }}"
+                             alt="Step-by-step liability insurance claims process flowchart"
+                             class="img-fluid rounded-lg mb-4"
+                             width="800" height="600"
+                             loading="lazy">
+                        <div class="steps-list mt-4">
+                            <h3 class="h5 mb-3">Claims Process Steps</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ol class="list-unstyled">
+                                        <li class="mb-3">
+                                            <span class="step-number">1</span>
+                                            <span class="step-text">Document the accident scene</span>
+                                        </li>
+                                        <li class="mb-3">
+                                            <span class="step-number">2</span>
+                                            <span class="step-text">Exchange information with other parties</span>
+                                        </li>
+                                        <li class="mb-3">
+                                            <span class="step-number">3</span>
+                                            <span class="step-text">Contact your insurance company</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-6">
+                                    <ol class="list-unstyled" start="4">
+                                        <li class="mb-3">
+                                            <span class="step-number">4</span>
+                                            <span class="step-text">Provide requested documentation</span>
+                                        </li>
+                                        <li class="mb-3">
+                                            <span class="step-number">5</span>
+                                            <span class="step-text">Cooperate with claims adjuster</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section id="faq" class="content-section mb-5">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is the minimum liability coverage required?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Requirements vary by state. Most states require minimum coverage of:
+                                    <ul>
+                                        <li>$25,000 for bodily injury per person</li>
+                                        <li>$50,000 for bodily injury per accident</li>
+                                        <li>$25,000 for property damage</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional FAQ items -->
+                    </div>
+                </section>
+
+                <!-- Premium Calculator Section -->
+                <section id="calculator" class="content-section mb-5">
+                    <h2 class="section-title">Premium Calculator</h2>
+                    <div class="calculator-card bg-light p-4 rounded-lg shadow-sm">
+                        <p class="lead mb-4">Estimate your liability insurance premium based on your specific needs.</p>
+                        <a href="/calculator" class="btn btn-primary btn-lg">Try Our Calculator <i class="bi bi-calculator"></i></a>
+                    </div>
+                </section>
+                <!-- Author Bio -->
+                <div class="author-bio card mt-5">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <img src="{{ url_for('static', filename='images/author-avatar.webp') }}" 
+                                 class="rounded-circle me-3" 
+                                 alt="Author avatar" 
+                                 style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h5 class="mb-1">Written by InsureCalcu Team</h5>
+                                <p class="text-muted mb-0">Insurance experts dedicated to helping you make informed decisions about your vehicle insurance needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Share Guide Section -->
+                <div class="share-guide bg-light p-4 rounded-lg shadow-sm mb-5">
+                    <h3 class="h5 mb-3">Share this Guide</h3>
+                    <p class="text-muted mb-3">Found this guide helpful? Share it with others!</p>
+                    <div class="share-buttons d-flex gap-3">
+                        <button onclick="shareOnSocial('twitter')" class="btn btn-twitter">
+                            <i class="fab fa-twitter me-2"></i>Tweet
+                        </button>
+                        <button onclick="shareOnSocial('facebook')" class="btn btn-facebook">
+                            <i class="fab fa-facebook-f me-2"></i>Share
+                        </button>
+                        <button onclick="shareOnSocial('linkedin')" class="btn btn-linkedin">
+                            <i class="fab fa-linkedin-in me-2"></i>Post
+                        </button>
+                        <button onclick="copyPageUrl()" class="btn btn-secondary">
+                            <i class="fas fa-link me-2"></i>Copy Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<style>
+    .liability-guide {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        color: #2c3e50;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #0d6efd, #084298);
+        min-height: 60vh;
+        overflow: hidden;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+
+    .hero-section .container {
+        z-index: 2;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.6;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #2c3e50;
+        border-bottom: 3px solid #0d6efd;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    .nav-link {
+        color: #495057;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        padding: 0.5rem 0;
+    }
+
+    .nav-link:hover {
+        color: #0d6efd;
+        transform: translateX(5px);
+    }
+
+    .content-card,
+    .benefit-card {
+        transition: transform 0.2s ease;
+        border-left: 4px solid #0d6efd;
+    }
+
+    .content-card:hover,
+    .benefit-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .benefit-icon {
+        color: #0d6efd;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #e7f1ff;
+        color: #0d6efd;
+    }
+
+    .btn-twitter { background: #1DA1F2; color: white; }
+    .btn-facebook { background: #4267B2; color: white; }
+    .btn-linkedin { background: #0077b5; color: white; }
+    
+    .btn-twitter:hover,
+    .btn-facebook:hover,
+    .btn-linkedin:hover {
+        transform: translateY(-2px);
+        color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 50vh;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+        }
+    }
+</style>
+{% endblock %}
