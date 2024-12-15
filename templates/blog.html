@@ -98,6 +98,47 @@
             </div>
         </div>
 
+       <!-- Featured Blog Posts -->
+       <div class="row g-4 mb-5">
+           <!-- Understanding Insurance Premiums Blog Post -->
+           <div class="col-md-6">
+               <div class="card h-100 shadow-sm hover-shadow">
+                   <img src="{{ url_for('static', filename='images/blog/insurance-premiums-card.webp') }}"
+                        class="card-img-top featured-image"
+                        alt="Understanding Insurance Premiums Guide"
+                        loading="lazy">
+                   <div class="card-body">
+                       <div class="d-flex justify-content-between align-items-center mb-2">
+                           <span class="badge bg-primary">Featured</span>
+                           <small class="text-muted">15 min read</small>
+                       </div>
+                       <h3 class="card-title h5">Understanding Insurance Premiums: A Comprehensive Guide</h3>
+                       <p class="card-text text-muted">Learn about the key factors that influence insurance premiums, optimization strategies, and make informed decisions about your coverage.</p>
+                       <a href="{{ url_for('blog_post_understanding_premiums') }}" class="btn btn-outline-primary stretched-link">Read More</a>
+                   </div>
+               </div>
+           </div>
+       
+           <!-- Car Insurance Coverage Types Blog Post -->
+           <div class="col-md-6">
+               <div class="card h-100 shadow-sm hover-shadow">
+                   <img src="{{ url_for('static', filename='images/blog/car-insurance-card.webp') }}"
+                        class="card-img-top featured-image"
+                        alt="Understanding Car Insurance Coverage Types"
+                        loading="lazy">
+                   <div class="card-body">
+                       <div class="d-flex justify-content-between align-items-center mb-2">
+                           <span class="badge bg-primary">Featured</span>
+                           <small class="text-muted">12 min read</small>
+                       </div>
+                       <h3 class="card-title h5">Understanding Car Insurance Coverage Types</h3>
+                       <p class="card-text text-muted">Explore different types of car insurance coverage and find out which options best suit your needs and circumstances.</p>
+                       <a href="{{ url_for('blog_post_coverage_types') }}" class="btn btn-outline-primary stretched-link">Read More</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+
     </div>
 
     <!-- No Results Message -->
@@ -122,6 +163,30 @@
 </div>
 
 <style>
+    .featured-post .card {
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .featured-post .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .featured-post-image {
+        min-height: 400px;
+    }
+    
+    .badge {
+        padding: 0.5em 1em;
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        .featured-post-image {
+            min-height: 250px;
+        }
+    }
 .featured-post {
     background-color: #f8f9fa;
     border-left: 4px solid #0d6efd;

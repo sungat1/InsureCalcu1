@@ -110,6 +110,10 @@ def blog_post_comprehensive():
 def blog_post_insurance_rates():
     return render_template('blog-post-insurance-rates.html')
 
+@app.route('/blog/understanding-insurance-premiums')
+def blog_post_understanding_premiums():
+    return render_template('blog-post-understanding-premiums.html')
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
@@ -143,4 +147,4 @@ def submit_contact():
         }), 500
 
 if __name__ == '__main__':
-    app.run(debug=false)
+    app.run(debug=True)
