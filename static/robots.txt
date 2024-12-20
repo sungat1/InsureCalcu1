@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /blog/car-insurance-explained
+Allow: /static/images/
+
+Sitemap: https://insurecalcu.com/sitemap.xml
