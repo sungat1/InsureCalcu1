@@ -118,6 +118,10 @@ def blog_post_understanding_premiums():
 def blog_post_vehicle_insurance_types():
     return render_template('blog-post-vehicle-insurance-types.html')
 
+@app.route('/blog/car-insurance-explained')
+def blog_post_car_insurance_explained():
+    return render_template('blog-post-car-insurance-explained.html')
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
