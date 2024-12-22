@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <button class="nav-link" data-category="news">Industry News</button>
                 </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-category="tools">Tools</button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -187,6 +190,24 @@
                         <h3 class="card-title h5">Understanding Car Insurance Coverage Types</h3>
                         <p class="card-text text-muted">Explore different types of car insurance coverage and find out which options best suit your needs and circumstances.</p>
                         <a href="{{ url_for('blog_post_coverage_types') }}" class="btn btn-outline-primary stretched-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance Calculator Guide Blog Card -->
+            <div class="col-md-6" data-category="tools">
+                <div class="card h-100 shadow-sm hover-shadow">
+                    <img src="{{ url_for('static', filename='images/insurance-calculator-guide.webp') }}"
+                         class="card-img-top"
+                         alt="Car Insurance Cost Calculator Guide">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Tools</span>
+                        <h3 class="card-title h5">Car Insurance Cost Calculator: Your Guide to Premium Calculations</h3>
+                        <p class="card-text text-muted small">December 21, 2024 • 15 min read</p>
+                        <p class="card-text">Master the art of calculating car insurance costs with our comprehensive guide and calculator tool.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="{{ url_for('blog_post_insurance_calculator') }}" class="btn btn-outline-primary btn-sm">Continue Reading</a>
                     </div>
                 </div>
             </div>
