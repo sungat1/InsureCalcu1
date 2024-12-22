@@ -122,6 +122,10 @@ def blog_post_vehicle_insurance_types():
 def blog_post_car_insurance_explained():
     return render_template('blog-post-car-insurance-explained.html')
 
+@app.route('/blog/comprehensive-coverage')
+def blog_post_comprehensive_coverage():
+    return render_template('blog-post-comprehensive-coverage.html')
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
