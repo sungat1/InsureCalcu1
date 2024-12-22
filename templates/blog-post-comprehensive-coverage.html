@@ -1,0 +1,408 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<!-- Additional SEO Meta Tags -->
+<meta name="description" content="Discover everything you need to know about comprehensive car insurance coverage. Learn what it covers, how it works, and why it's essential for protecting your vehicle from non-collision incidents.">
+<meta name="author" content="InsureCalcu">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days">
+<meta name="keywords" content="comprehensive car insurance, full coverage insurance, non-collision coverage, vehicle protection, auto insurance coverage, comprehensive coverage explained">
+
+<!-- Social Media Meta Tags -->
+<meta property="article:published_time" content="2024-12-21T22:04:21-05:00">
+<meta property="article:author" content="InsureCalcu">
+<meta property="article:section" content="Car Insurance">
+<meta property="article:tag" content="comprehensive coverage, car insurance, vehicle protection, insurance guide">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Comprehensive Car Insurance Coverage: Complete Guide">
+<meta property="og:description" content="Discover everything you need to know about comprehensive car insurance coverage. Learn what it covers, how it works, and why it's essential for protecting your vehicle.">
+<meta property="og:image" content="{{ url_for('static', filename='images/comprehensive-coverage-guide.webp') }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ url_for('static', filename='images/comprehensive-coverage-guide.webp') }}">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Comprehensive Car Insurance Coverage: Complete Guide",
+  "image": "{{ url_for('static', filename='images/comprehensive-coverage-guide.webp') }}",
+  "author": {
+    "@type": "Organization",
+    "name": "InsureCalcu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InsureCalcu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ url_for('static', filename='images/logo.png') }}"
+    }
+  },
+  "datePublished": "2024-12-21T22:04:21-05:00",
+  "dateModified": "2024-12-21T22:04:21-05:00",
+  "description": "Discover everything you need to know about comprehensive car insurance coverage. Learn what it covers, how it works, and why it's essential for protecting your vehicle.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.url }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <article class="blog-post">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Understanding Comprehensive Car Insurance Coverage</li>
+            </ol>
+        </nav>
+
+        <!-- Featured Image -->
+        <div class="featured-image-container mb-4">
+            <img src="{{ url_for('static', filename='images/comprehensive-coverage-guide.webp') }}"
+                 alt="Comprehensive car insurance coverage explained"
+                 class="img-fluid rounded featured-image"
+                 width="1200"
+                 height="630">
+        </div>
+
+        <header class="blog-header mb-5">
+            <h1 class="blog-title display-4">Understanding Comprehensive Car Insurance Coverage: Complete Guide</h1>
+            <div class="blog-meta text-muted mb-4">
+                <span class="me-3"><i class="bi bi-calendar3"></i> December 21, 2024</span>
+                <span class="me-3"><i class="bi bi-person"></i> By InsureCalcu Team</span>
+                <span><i class="bi bi-tag"></i> Car Insurance</span>
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <section id="introduction" class="mb-5">
+                <p class="lead">Comprehensive car insurance coverage is a crucial component of auto insurance that protects your vehicle from a wide range of non-collision related incidents. While many drivers understand the basics of collision coverage, comprehensive insurance often remains misunderstood despite its significant value in protecting your investment.</p>
+            </section>
+
+            <section id="what-is-comprehensive" class="mb-5">
+                <h2>What is Comprehensive Car Insurance Coverage?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>Comprehensive coverage is an optional type of auto insurance that covers damage to your vehicle from causes other than collisions. This coverage fills the gaps left by collision insurance, protecting you from a variety of unexpected events that could damage your vehicle.</p>
+                        
+                        <h3 class="mt-4">Key Features:</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Protection against non-collision incidents</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Coverage for natural disasters and weather events</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Theft and vandalism protection</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Flexible deductible options</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="coverage-details" class="mb-5">
+                <h2>What Does Comprehensive Coverage Include?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Natural Events</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-cloud-lightning-fill text-warning me-2"></i>Storms and hail damage</li>
+                                    <li><i class="bi bi-tree-fill text-success me-2"></i>Falling objects</li>
+                                    <li><i class="bi bi-fire text-danger me-2"></i>Fire damage</li>
+                                    <li><i class="bi bi-water text-primary me-2"></i>Flood damage</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Human-Related Incidents</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-shield-lock-fill text-primary me-2"></i>Theft</li>
+                                    <li><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>Vandalism</li>
+                                    <li><i class="bi bi-window text-info me-2"></i>Glass breakage</li>
+                                    <li><i class="bi bi-car-front-fill text-secondary me-2"></i>Animal collisions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cost-factors" class="mb-5">
+                <h2>Factors Affecting Comprehensive Coverage Cost</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Vehicle-Related Factors</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-currency-dollar text-success me-2"></i>Vehicle value</li>
+                                    <li><i class="bi bi-calendar-date text-primary me-2"></i>Vehicle age</li>
+                                    <li><i class="bi bi-tools text-secondary me-2"></i>Repair costs</li>
+                                    <li><i class="bi bi-shield-check text-info me-2"></i>Safety features</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Location-Based Factors</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-geo-alt-fill text-danger me-2"></i>Crime rates in your area</li>
+                                    <li><i class="bi bi-cloud-sun-fill text-warning me-2"></i>Local weather patterns</li>
+                                    <li><i class="bi bi-building text-primary me-2"></i>Urban vs. rural location</li>
+                                    <li><i class="bi bi-house-door-fill text-success me-2"></i>Parking situation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="deductibles" class="mb-5">
+                <h2>Understanding Deductibles</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>A deductible is the amount you pay out of pocket before your comprehensive coverage kicks in. Choosing the right deductible involves balancing monthly premium costs with potential out-of-pocket expenses.</p>
+                        
+                        <div class="alert alert-info mt-3">
+                            <h4 class="h5"><i class="bi bi-info-circle-fill me-2"></i>Pro Tip:</h4>
+                            <p class="mb-0">Consider your emergency savings when selecting a deductible. A higher deductible means lower premiums but requires more out-of-pocket payment if you file a claim.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="when-to-get" class="mb-5">
+                <h2>When Should You Get Comprehensive Coverage?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Recommended Scenarios:</h3>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>New or valuable vehicles</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Leased or financed cars</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>High-risk areas for theft</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Regions with extreme weather</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Limited parking options</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>High-value vehicle modifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion" class="mb-5">
+                <h2>Making the Right Choice</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Comprehensive coverage is a valuable addition to your car insurance policy, providing protection against a wide range of non-collision incidents. While it's optional in most cases, it offers peace of mind knowing your vehicle is protected against unexpected events beyond your control.</p>
+                        <p>Consider your vehicle's value, location, and personal risk factors when deciding on comprehensive coverage. Remember that the cost of comprehensive insurance is often a small price to pay compared to the potential expense of repairing or replacing your vehicle after an unexpected incident.</p>
+                        <div class="alert alert-success mt-3">
+                            <h4 class="h5"><i class="bi bi-lightbulb-fill me-2"></i>Key Takeaway:</h4>
+                            <p class="mb-0">Evaluate your specific situation, including your vehicle's value, location-based risks, and financial capabilities, to determine if comprehensive coverage is right for you. Our insurance calculator can help you estimate costs and make an informed decision.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Share Section -->
+            <section id="share" class="my-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 mb-4">Share this article</h3>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <!-- Facebook Share -->
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-primary d-flex align-items-center">
+                                <i class="bi bi-facebook me-2"></i>
+                                <span>Share on Facebook</span>
+                            </a>
+
+                            <!-- Twitter/X Share -->
+                            <a href="https://twitter.com/intent/tweet?url={{ request.url|urlencode }}&text={{ 'Understanding Comprehensive Car Insurance Coverage: Complete Guide'|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-dark d-flex align-items-center">
+                                <i class="bi bi-twitter-x me-2"></i>
+                                <span>Share on Twitter</span>
+                            </a>
+
+                            <!-- LinkedIn Share -->
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.url|urlencode }}&title={{ 'Understanding Comprehensive Car Insurance Coverage: Complete Guide'|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-primary d-flex align-items-center">
+                                <i class="bi bi-linkedin me-2"></i>
+                                <span>Share on LinkedIn</span>
+                            </a>
+
+                            <!-- WhatsApp Share -->
+                            <a href="https://wa.me/?text={{ 'Check out this comprehensive guide about car insurance coverage: '|urlencode }}{{ request.url|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-success d-flex align-items-center">
+                                <i class="bi bi-whatsapp me-2"></i>
+                                <span>Share on WhatsApp</span>
+                            </a>
+
+                            <!-- Email Share -->
+                            <a href="mailto:?subject={{ 'Understanding Comprehensive Car Insurance Coverage: Complete Guide'|urlencode }}&body={{ 'Check out this comprehensive guide about car insurance coverage: '|urlencode }}{{ request.url|urlencode }}"
+                               class="btn btn-outline-secondary d-flex align-items-center">
+                                <i class="bi bi-envelope me-2"></i>
+                                <span>Share via Email</span>
+                            </a>
+
+                            <!-- Copy Link Button -->
+                            <button onclick="copyArticleLink()"
+                                    class="btn btn-outline-info d-flex align-items-center">
+                                <i class="bi bi-link-45deg me-2"></i>
+                                <span>Copy Link</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Author Bio -->
+            <div class="author-bio bg-light p-4 rounded mt-5">
+                <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='images/team-profile.webp') }}"
+                         alt="InsureCalcu Team"
+                         class="rounded-circle me-3"
+                         width="64"
+                         height="64">
+                    <div>
+                        <h5 class="mb-1">InsureCalcu Team</h5>
+                        <p class="mb-0">Insurance experts dedicated to helping you make informed decisions about your coverage needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<style>
+.featured-image {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-content h2 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+    color: #34495e;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.blog-content .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s ease-in-out;
+}
+
+.blog-content .card:hover {
+    transform: translateY(-2px);
+}
+
+.blog-content .list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.blog-content .list-group-item:first-child {
+    border-top: none;
+}
+
+.blog-content .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Share buttons styles */
+#share .btn {
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+#share .btn:hover {
+    transform: translateY(-2px);
+}
+
+#share .btn i {
+    font-size: 1.1rem;
+}
+
+#share .card {
+    background: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    #share .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+    }
+    
+    #share .btn span {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .blog-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-content h3 {
+        font-size: 1.25rem;
+    }
+}
+</style>
+
+<!-- Add JavaScript for copy link functionality -->
+<script>
+function copyArticleLink() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const button = document.querySelector('#share button');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="bi bi-check2-circle me-2"></i><span>Link Copied!</span>';
+        button.classList.remove('btn-outline-info');
+        button.classList.add('btn-info', 'text-white');
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('btn-info', 'text-white');
+            button.classList.add('btn-outline-info');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy link. Please try again.');
+    });
+}
+</script>
+{% endblock %}
