@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<!-- SEO Meta Tags -->
+<meta name="description" content="Learn the essentials of basic car insurance coverage, including what it covers, why it's important, and how to choose the right policy for your needs.">
+<meta name="author" content="InsureCalcu">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days">
+<meta name="keywords" content="basic car insurance, auto insurance coverage, vehicle insurance basics, car insurance policy, insurance coverage types">
+
+<!-- Social Media Meta Tags -->
+<meta property="article:published_time" content="2024-12-22T11:03:45-05:00">
+<meta property="article:author" content="InsureCalcu">
+<meta property="article:section" content="Car Insurance">
+<meta property="article:tag" content="basic coverage, car insurance, insurance policy, vehicle protection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Basic Car Insurance Coverage: A Complete Guide">
+<meta property="og:description" content="Learn the essentials of basic car insurance coverage, including what it covers, why it's important, and how to choose the right policy.">
+<meta property="og:image" content="{{ url_for('static', filename='images/basic-coverage-guide.webp') }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ url_for('static', filename='images/basic-coverage-guide.webp') }}">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Basic Car Insurance Coverage: A Complete Guide",
+  "image": "{{ url_for('static', filename='images/basic-coverage-guide.webp') }}",
+  "author": {
+    "@type": "Organization",
+    "name": "InsureCalcu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InsureCalcu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ url_for('static', filename='images/logo.png') }}"
+    }
+  },
+  "datePublished": "2024-12-22T11:03:45-05:00",
+  "dateModified": "2024-12-22T11:03:45-05:00",
+  "description": "Learn the essentials of basic car insurance coverage, including what it covers, why it's important, and how to choose the right policy.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.url }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <article class="blog-post">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Understanding Basic Car Insurance Coverage</li>
+            </ol>
+        </nav>
+
+        <!-- Featured Image -->
+        <div class="featured-image-container mb-4">
+            <img src="{{ url_for('static', filename='images/basic-coverage-guide.webp') }}"
+                 alt="Basic Car Insurance Coverage Guide"
+                 class="img-fluid rounded featured-image"
+                 width="1200"
+                 height="630">
+        </div>
+
+        <header class="blog-header mb-5">
+            <h1 class="blog-title display-4">Understanding Basic Car Insurance Coverage: A Complete Guide</h1>
+            <div class="blog-meta text-muted mb-4">
+                <span class="me-3"><i class="bi bi-calendar3"></i> December 22, 2024</span>
+                <span class="me-3"><i class="bi bi-person"></i> By InsureCalcu Team</span>
+                <span><i class="bi bi-tag"></i> Car Insurance</span>
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <section id="introduction" class="mb-5">
+                <p class="lead">Basic car insurance coverage is the foundation of any auto insurance policy. It provides essential protection for drivers and their vehicles, ensuring compliance with legal requirements and offering financial security in the event of an accident.</p>
+            </section>
+
+            <section id="what-is-basic-coverage" class="mb-5">
+                <h2>What is Basic Car Insurance Coverage?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>Basic car insurance coverage typically includes liability insurance, which covers damages you may cause to others in an accident. This coverage is often required by law and serves as the minimum protection for drivers.</p>
+                        
+                        <h3 class="mt-4">Key Features:</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Liability for bodily injury and property damage</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Compliance with state insurance laws</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Financial protection against lawsuits</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Optional add-ons for enhanced coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="coverage-details" class="mb-5">
+                <h2>What Does Basic Coverage Include?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Liability Coverage</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-person-fill text-primary me-2"></i>Bodily Injury Liability</li>
+                                    <li><i class="bi bi-building-fill text-primary me-2"></i>Property Damage Liability</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Optional Add-Ons</h3>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-shield-fill-check text-success me-2"></i>Uninsured Motorist Coverage</li>
+                                    <li><i class="bi bi-car-front-fill text-secondary me-2"></i>Medical Payments Coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="importance" class="mb-5">
+                <h2>Why is Basic Coverage Important?</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>Basic car insurance coverage is crucial for protecting yourself and others on the road. It ensures that you can cover the costs associated with accidents, reducing the financial burden on you and providing peace of mind.</p>
+                        
+                        <div class="alert alert-info mt-3">
+                            <h4 class="h5"><i class="bi bi-info-circle-fill me-2"></i>Did You Know?</h4>
+                            <p class="mb-0">Most states require drivers to carry a minimum amount of liability insurance to legally operate a vehicle.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="choosing-policy" class="mb-5">
+                <h2>How to Choose the Right Basic Coverage Policy</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Consider Your Needs</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-person-check-fill text-success me-2"></i>Assess your driving habits and vehicle usage</li>
+                            <li><i class="bi bi-geo-alt-fill text-success me-2"></i>Evaluate the risks in your area</li>
+                            <li><i class="bi bi-currency-dollar text-success me-2"></i>Determine your budget for premiums</li>
+                        </ul>
+                        
+                        <h3 class="mt-4">Compare Providers</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-building-fill text-primary me-2"></i>Research different insurance companies</li>
+                            <li><i class="bi bi-star-fill text-primary me-2"></i>Check customer reviews and ratings</li>
+                            <li><i class="bi bi-file-earmark-text-fill text-primary me-2"></i>Review policy terms and conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="common-mistakes" class="mb-5">
+                <h2>Common Mistakes to Avoid When Choosing Basic Coverage</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <h4 class="h5"><i class="bi bi-exclamation-triangle-fill me-2"></i>Watch Out For:</h4>
+                            <ul class="mb-0">
+                                <li>Underestimating required coverage limits</li>
+                                <li>Ignoring optional add-ons that may be beneficial</li>
+                                <li>Choosing the cheapest policy without considering coverage</li>
+                                <li>Not reviewing policy terms regularly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion" class="mb-5">
+                <h2>Making the Right Choice for Your Car Insurance</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Basic car insurance coverage is an essential part of responsible vehicle ownership. By understanding your coverage options and choosing the right policy, you can protect yourself, your vehicle, and your financial future.</p>
+                        
+                        <div class="alert alert-success mt-3">
+                            <h4 class="h5"><i class="bi bi-lightbulb-fill me-2"></i>Key Takeaway:</h4>
+                            <p class="mb-0">Regularly review your car insurance policy to ensure it meets your needs and provides adequate protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Share Section -->
+            <section id="share" class="my-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 mb-4">Share this article</h3>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-primary d-flex align-items-center">
+                                <i class="bi bi-facebook me-2"></i>
+                                <span>Share on Facebook</span>
+                            </a>
+
+                            <a href="https://twitter.com/intent/tweet?url={{ request.url|urlencode }}&text={{ 'Understanding Basic Car Insurance Coverage: A Complete Guide'|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-dark d-flex align-items-center">
+                                <i class="bi bi-twitter-x me-2"></i>
+                                <span>Share on Twitter</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.url|urlencode }}&title={{ 'Understanding Basic Car Insurance Coverage: A Complete Guide'|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-primary d-flex align-items-center">
+                                <i class="bi bi-linkedin me-2"></i>
+                                <span>Share on LinkedIn</span>
+                            </a>
+
+                            <a href="https://wa.me/?text={{ 'Check out this comprehensive guide about basic car insurance coverage: '|urlencode }}{{ request.url|urlencode }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-success d-flex align-items-center">
+                                <i class="bi bi-whatsapp me-2"></i>
+                                <span>Share on WhatsApp</span>
+                            </a>
+
+                            <a href="mailto:?subject={{ 'Understanding Basic Car Insurance Coverage: A Complete Guide'|urlencode }}&body={{ 'Check out this comprehensive guide about basic car insurance coverage: '|urlencode }}{{ request.url|urlencode }}"
+                               class="btn btn-outline-secondary d-flex align-items-center">
+                                <i class="bi bi-envelope me-2"></i>
+                                <span>Share via Email</span>
+                            </a>
+
+                            <button onclick="copyArticleLink()"
+                                    class="btn btn-outline-info d-flex align-items-center">
+                                <i class="bi bi-link-45deg me-2"></i>
+                                <span>Copy Link</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Author Bio -->
+            <div class="author-bio bg-light p-4 rounded mt-5">
+                <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='images/team-profile.webp') }}"
+                         alt="InsureCalcu Team"
+                         class="rounded-circle me-3"
+                         width="64"
+                         height="64">
+                    <div>
+                        <h5 class="mb-1">InsureCalcu Team</h5>
+                        <p class="mb-0">Insurance experts dedicated to helping you make informed decisions about your coverage needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<style>
+.featured-image {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-content h2 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+    color: #34495e;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.blog-content .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s ease-in-out;
+}
+
+.blog-content .card:hover {
+    transform: translateY(-2px);
+}
+
+.blog-content .list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.blog-content .list-group-item:first-child {
+    border-top: none;
+}
+
+.blog-content .list-group-item:last-child {
+    border-bottom: none;
+}
+
+#share .btn {
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+#share .btn:hover {
+    transform: translateY(-2px);
+}
+
+#share .btn i {
+    font-size: 1.1rem;
+}
+
+#share .card {
+    background: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    #share .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+    }
+    
+    #share .btn span {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .blog-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-content h3 {
+        font-size: 1.25rem;
+    }
+}
+</style>
+
+<!-- Add JavaScript for copy link functionality -->
+<script>
+function copyArticleLink() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const button = document.querySelector('#share button');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="bi bi-check2-circle me-2"></i><span>Link Copied!</span>';
+        button.classList.remove('btn-outline-info');
+        button.classList.add('btn-info', 'text-white');
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('btn-info', 'text-white');
+            button.classList.add('btn-outline-info');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy link. Please try again.');
+    });
+}
+</script>
+{% endblock %}
