@@ -130,6 +130,18 @@ def blog_post_comprehensive_coverage():
 def blog_post_insurance_calculator():
     return render_template('blog-post-insurance-calculator-guide.html')
 
+@app.route('/blog/basic-coverage')
+def blog_post_basic_coverage():
+    return render_template('blog-post-basic-coverage.html')
+
+@app.route('/blog/full-coverage')
+def blog_post_full_coverage():
+    return render_template('blog-post-full-coverage.html')
+
+@app.route('/blog/car-insurance-options')
+def blog_post_car_insurance_options():
+    return render_template('blog-post-car-insurance-options.html')
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
