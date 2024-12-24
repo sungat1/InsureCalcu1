@@ -3,7 +3,7 @@
     <!-- Home Page -->
     <url>
         <loc>https://insurecalcu.xyz/</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,31 +11,31 @@
     <!-- Main Pages -->
     <url>
         <loc>https://insurecalcu.xyz/about</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://insurecalcu.xyz/contact</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://insurecalcu.xyz/calculator</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://insurecalcu.xyz/blog</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://insurecalcu.xyz/faq</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -107,6 +107,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>https://insurecalcu.xyz/blog/premium-calculations</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
     <!-- Insurance Types -->
     <url>
@@ -127,13 +133,43 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://insurecalcu.xyz/insurance/liability</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://insurecalcu.xyz/insurance/comprehensive</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://insurecalcu.xyz/insurance/collision</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-    <!-- Policy Pages -->
+    <!-- Tools and Resources -->
+    <url>
+        <loc>https://insurecalcu.xyz/resources</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://insurecalcu.xyz/privacy-policy</loc>
-        <lastmod>2024-12-22</lastmod>
+        <lastmod>2024-12-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://insurecalcu.xyz/terms-of-service</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://insurecalcu.xyz/terms-conditions</loc>
