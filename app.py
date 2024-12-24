@@ -142,6 +142,10 @@ def blog_post_full_coverage():
 def blog_post_car_insurance_options():
     return render_template('blog-post-car-insurance-options.html')
 
+@app.route('/blog/premium-calculations')
+def blog_post_premium_calculations():
+    return render_template('blog-post-premium-calculations.html')
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
